@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class adjListE {
   public static void main(String[] args) {
+    // 0-1-2-3-4
     int V = 5;
      int[][] edges = {
     {0,1},
