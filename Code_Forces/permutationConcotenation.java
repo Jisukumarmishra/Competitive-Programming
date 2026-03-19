@@ -1,6 +1,6 @@
 import java.util.*;
 // D. New Year and the Permutation Concatenation
-public class Main {
+public class permutationConcotenation {
   static final long MOD = 998244353;
 
   static long power(long base, long exp, long mod) {
