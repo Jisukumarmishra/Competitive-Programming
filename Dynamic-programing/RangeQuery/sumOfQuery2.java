@@ -1,5 +1,8 @@
 package RangeQuery;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class sumOfQuery2 {
   static int [] arr;
   static int [] segTree;
@@ -48,8 +51,23 @@ public class sumOfQuery2 {
   int  mid = (l+r)/2;
   int left = Query(2*i+1, l, mid, ql, qr);
   int right =Query(2*i+2, mid+1, r, ql, qr);
+  return left+right;
 
   }
+
+   List<Integer> querySum(int n, int arr[], int q, int queries[]) {
+    // code here
+    List<Integer> ans = new ArrayList<>();
+    this.arr = arr;
+    segTree = new int[4*n];
+    buildSegTree(0,0,n-1);
+    for(int i=0; i<queries.length; i +=2){
+        int s = queries[i]-1;
+        int e = queries[i+1]-1;
+        ans.add(Query(0,0,n-1,s,e));
+    }
+    return ans;
+}
 
 
 }
