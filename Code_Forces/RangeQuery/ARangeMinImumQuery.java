@@ -1,5 +1,3 @@
-package RangeQuery-programing.RangeQuery;
-
 import java.util.Scanner;
 
 public class ARangeMinImumQuery {
