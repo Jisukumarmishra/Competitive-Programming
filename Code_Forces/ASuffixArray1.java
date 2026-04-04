@@ -20,6 +20,7 @@ public class ASuffixArray1 {
     pair[] arr = new pair [n+1];
 
     // creae suffix
+    // here we store the index then memory is optimized
     for(int i =0; i<=n; i++) {
       arr[i] = new pair(s.substring(i),i);
     }
