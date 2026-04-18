@@ -19,7 +19,7 @@ public class mcm {
   static int mcmRecusion (int arr[], int i, int j) {
   if (i == j ) {
     return 0; // single matrix case 
-    // and single matrix case ka cost 0 hota hai beacuse usxko kis se multiply karoge
+    // and single matrix case ka cost 0 hota hai beacuse usko kisi se multiply karoge
   }
   int ans = Integer.MAX_VALUE;
   for ( int k =i;k<j; k++) { // also k<=j-1;
