@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class lis2 {
   public static void main(String[] args) {
-    int[] arr = {10, 9, 2, 5, 3, 7, 101, 18};
+    int[] arr = {10, 9, 2, 8, 7, 4, 6};
      int n = arr.length;
      
     // call in the main
@@ -29,7 +29,6 @@ public class lis2 {
     // Tabo code 
     int tabAns = tabo(arr);
     System.out.println("Tabulation Answer: " + tabAns);
-
 
   }
 
@@ -88,7 +87,14 @@ public class lis2 {
   for(int len : dp) {
     maxlis = Math.max(maxlis, len);
   }
-
+  // print(dp);
  return maxlis;
   }
+
+  // static void print(int[] dp) {
+  //   for(int i = 0; i < dp.length; i++) {
+  //       System.out.print(dp[i] + " ");
+  //   }
+  //   System.out.println();
+  // }
 }
