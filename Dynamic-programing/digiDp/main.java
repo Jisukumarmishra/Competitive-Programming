@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
 class main {
-  static int rec (int idx, boolean tight, int prev,String s) {
+
+  static int rec (int idx, boolean tight, boolean started, int prev,String s) {
     if(idx == s.length()) {
       return 1;
     }
@@ -17,18 +18,27 @@ class main {
 
   for(int num = 0; num <= ul; num++) {
 
-    if(num == prev) {
-      continue;
-    }
+    
 
     boolean newTight;
+
     if( tight == true && num == ul) {
       newTight = true;
     } else {
       newTight = false;
     }
+    if(!started && num == ul) {
+     count += rec(idx+1, newTight,false, -1, s);
+    } else {
+      if(num == prev) {
+      continue;
+    }
 
-    count += rec(idx+1, newTight, num, s);
+    count += rec(idx+1, newTight, true, num, s)
+
+    }
+
+    
    }
    return count;
  }
@@ -37,7 +47,7 @@ public static void main(String[] args) {
   int l = sc.nextInt(); 
   int r = sc.nextInt();
 
-  System.out.println(rec(0,true, -1, r+""));
+  System.out.println(rec(0,true,false, -1, r+""));
   
 }
 }
