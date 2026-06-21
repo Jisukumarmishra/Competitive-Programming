@@ -1,36 +1,37 @@
 import java.util.Scanner;
 
+// Memolizaion
 public class CoutingNumbers {
 
     static long dp[][][][] = new long[20][2][2][11];
     static boolean vis[][][][] = new boolean[20][2][2][11];
 
-    static long memo(int idx, boolean tight, boolean started,int prev, String s) {
+    static long memo(int idx, boolean tight, boolean started, int prev, String s) {
 
-        if (idx == s.length()) {
-            return 1;
-        }
+    if (idx == s.length()) {
+        return 1;
+    }
 
-        int p;
+    int p;
 
-        if (prev == -1) {
-            p = 10;
-        } else {
-            p = prev;
-        }
+    if (prev == -1) {
+        p = 10;
+    } else {
+        p = prev;
+    }
 
-        if (vis[idx][tight ? 1 : 0][started ? 1 : 0][p]) {
-            return dp[idx][tight ? 1 : 0][started ? 1 : 0][p];
-        }
+    if (vis[idx][tight ? 1 : 0][started ? 1 : 0][p]) {
+        return dp[idx][tight ? 1 : 0][started ? 1 : 0][p];
+    }
 
-        long count = 0;
-        int ul;
+    long count = 0;
+    int ul;
 
-        if (tight) {
-            ul = s.charAt(idx) - '0';
-        } else {
-            ul = 9;
-        }
+    if (tight) {
+        ul = s.charAt(idx) - '0';
+    } else {
+        ul = 9;
+    }
 
     for (int num = 0; num <= ul; num++) {
 
@@ -45,11 +46,11 @@ public class CoutingNumbers {
         if (!started && num == 0) {
 
             count += memo(
-                    idx + 1,
-                    newTight,
-                    false,
-                    -1,
-                    s
+            idx + 1,
+            newTight,
+            false,
+            -1,
+            s
             );
 
         } else {
@@ -59,11 +60,11 @@ public class CoutingNumbers {
             }
 
             count += memo(
-                    idx + 1,
-                    newTight,
-                    true,
-                    num,
-                    s
+              idx + 1,
+              newTight,
+              true,
+              num,
+              s
             );
         }
     }
