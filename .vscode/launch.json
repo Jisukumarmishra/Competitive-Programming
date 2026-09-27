@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "NextRound",
+      "request": "launch",
+      "mainClass": "NextRound",
+      "projectName": "Competitive-Programming_446ff03b"
+    },
+    {
+      "type": "java",
       "name": "BitLand",
       "request": "launch",
       "mainClass": "BitLand",
