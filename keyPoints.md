@@ -26,11 +26,10 @@ char ch = s.charAt(i)l
 
 this check at ch there is Letteror digit / operands
 
-
 # Jab tumhare paas multiple elements ko order/sort karna ho aur ek operation mein sirf nearby/adjacent elements ko compare-swap kar rahe ho, to:
 
-Outer loop  → multiple passes
-Inner loop  → current pass mein adjacent elements check
+Outer loop → multiple passes
+Inner loop → current pass mein adjacent elements check
 
 for(int pass = 0; pass < n; pass++) {
 
@@ -40,10 +39,21 @@ for(int pass = 0; pass < n; pass++) {
             // swap
         }
     }
-}
 
+}
 
 . Kya ek pass mein poora array guaranteed sorted ho jayega?
 → Agar nahi, outer loop chahiye.
 
+% 10 → get last digit/ Remainder
 
+13 % 10 = 3 → last digit is 3
+14 % 10 = 4 → last digit is 4
+1663 % 10 = 3 → last digit is 3
+1664 % 10 = 4 → last digit is 4
+
+/ 10 → remove last digit
+
+13 / 10 = 1
+14 / 10 = 1
+1663 / 10 = 166
