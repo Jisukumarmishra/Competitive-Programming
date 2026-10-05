@@ -6,6 +6,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SoildersAndBanans",
+      "request": "launch",
+      "mainClass": "SoildersAndBanans",
+      "projectName": "Competitive-Programming_446ff03b"
+    },
+    {
+      "type": "java",
+      "name": "VanyaAndFence",
+      "request": "launch",
+      "mainClass": "VanyaAndFence",
+      "projectName": "Competitive-Programming_446ff03b"
+    },
+    {
+      "type": "java",
       "name": "Accommodation",
       "request": "launch",
       "mainClass": "Accommodation",
