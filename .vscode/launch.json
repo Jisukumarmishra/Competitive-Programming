@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SortingRailwaysCars",
+      "request": "launch",
+      "mainClass": "SortingRailwaysCars",
+      "projectName": "Competitive-Programming_446ff03b"
+    },
+    {
+      "type": "java",
       "name": "SoildersAndBanans",
       "request": "launch",
       "mainClass": "SoildersAndBanans",
